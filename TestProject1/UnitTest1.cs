@@ -4,16 +4,16 @@ namespace TestProject1
     public class StringCalculatorTests
     {
         [Fact]
-        public void Add_EmptyString_ReturnsZero()
+        public void Add_MultipleNumbers_ReturnsSum()
         {
             // Arrange
             var calculator = new StringCalculator();
 
             // Act
-            var result = calculator.Add("");
+            var result = calculator.Add("1,2,3");
 
             // Assert
-            Assert.Equal(0, result);
+            Assert.Equal(6, result);
         }
     }
 

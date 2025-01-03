@@ -8,7 +8,11 @@ public class StringCalculator
 {
     public int Add(string numbers)
     {
-        return 0; // Placeholder
+        if (string.IsNullOrEmpty(numbers))
+            return 0;
+
+        var nums = numbers.Split(',').Select(int.Parse);
+        return nums.Sum();
     }
 }
 
